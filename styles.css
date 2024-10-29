@@ -6,6 +6,10 @@
     --light-color: #EEEBF7;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     flex-direction: row;
@@ -16,7 +20,7 @@ body {
 
 h1 {
     color: var(--primary-brand-color);
-    font-size: 48px;
+    font-size: 32px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -28,7 +32,7 @@ h1 {
     background-color: var(--light-color);
     display: flex;
     flex-direction: column;
-    flex-basis: 42%;
+    flex-basis: 25%;
     padding: 40px;
     justify-content: center;
     align-items: center;
@@ -86,20 +90,42 @@ input {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: center;
+}
+
+#readStatus {
+    transform: scale(1);
+    font-size: initial;
+    width: auto;
+    height: auto;
 }
 
 /*Right panel*/
 .bookshelf-area {
     display: flex;
-    flex-direction: column;
-    flex-basis: 58%;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    flex-basis: 75%;
+    align-items: baseline;
+    justify-content: baseline;
     padding: 40px;
     height: 100vh;
+    gap: 20px;
 }
 
 a {
     text-decoration: none;
     color: var(--primary-brand-color);
+}
+
+.book-item {
+    background-color: var(--light-color);
+    border: var(--primary-brand-color) solid;
+    border-radius: 20px;
+    width: 200px;
+    height: auto;
+    padding: 20px 20px;
+}
+
+.book-item h2 {
+    text-align: center;
 }
