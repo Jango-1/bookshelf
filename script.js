@@ -1,9 +1,11 @@
-const myLibrary = [];
+const myLibrary =[];
 
-const bookNameInput = document.querySelector("#book_name");
-const authorInput = document.querySelector("#author");
-const pagesInput = document.querySelector("#pages");
-const submitBookButton = document.querySelector(".submit")
+const submit = document.querySelector(".submit");
+
+submit.addEventListener("click", (event) => {
+    event.preventDefault();
+    addBooktoLibrary();
+});
 
 function Book(title, author, pages, readStatus) {
     this.title = title;
@@ -13,9 +15,12 @@ function Book(title, author, pages, readStatus) {
 }
 
 function addBooktoLibrary() {
+    const bookName = document.querySelector("#book_name").value;
+    const bookAuthor = document.querySelector("#author").value;
+    const bookPages = document.querySelector("#pages").value;
+    const bookStatus = document.querySelector("#readStatus").checked;
+    
+    const bookDetails = new Book(bookName, bookAuthor, bookPages, bookStatus);
 
+    myLibrary.push(bookDetails);
 }
-
-submitBookButton.addEventListener("click", () => {
-    return addBooktoLibrary();
-});
