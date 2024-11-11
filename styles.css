@@ -103,6 +103,7 @@ input {
 /*Right panel*/
 .bookshelf-area {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     flex-basis: 75%;
     align-items: baseline;

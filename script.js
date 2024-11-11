@@ -1,6 +1,5 @@
 const myLibrary =[];
 const bookShelfArea = document.querySelector(".bookshelf-area");
-
 const submit = document.querySelector(".submit");
 
 submit.addEventListener("click", (event) => {
